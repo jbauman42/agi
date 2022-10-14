@@ -68,7 +68,10 @@ cc_library(
             "-framework OpenGL",
         ],
         "//tools/build:windows": [],
-        "//tools/build:fuchsia-arm64": [],
+        "//tools/build:fuchsia-arm64": [
+            "-static-libstdc++",
+            "-static-libgcc"
+        ],
         # Android
         "//conditions:default": [
             "-ldl",
